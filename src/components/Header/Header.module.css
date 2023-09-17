@@ -1,0 +1,19 @@
+/* Common Classes 🤝  */
+
+.full__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  width: 100%;
+  height: 74px;
+}
+
+/* Big Screens Header 🖥️  */
+
+.big__screen__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aliceblue;
+}
