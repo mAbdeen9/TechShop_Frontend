@@ -1,0 +1,27 @@
+.logo {
+  color: #cce4cb;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo span {
+  display: block;
+  position: relative;
+  bottom: 6px;
+  font-size: 12px;
+  text-align: center;
+  color: #3dfecf;
+  letter-spacing: normal;
+}
+
+/* responsive size */
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+}

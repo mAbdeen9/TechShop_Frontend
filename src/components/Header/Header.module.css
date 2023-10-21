@@ -1,6 +1,9 @@
 /* Common Classes 🤝  */
 
 .full__container {
+  position: sticky;
+  top: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,40 +11,18 @@
   width: 100%;
   height: 74px;
   color: white;
-}
-
-.logo {
-  color: #cce4cb;
-  font-size: larger;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-right: 100px;
-}
-
-.logo span {
-  display: block;
-  position: relative;
-  bottom: 6px;
-  font-size: 12px;
-  text-align: center;
-  color: #78d97c;
+  z-index: 999;
 }
 
 .menuBtn {
   display: none;
 }
 
-.icons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-}
-
 .sections {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-content: center;
+  width: 40%;
   padding: 0.5rem;
   gap: 1rem;
   list-style-type: none;
@@ -74,9 +55,5 @@
 
   .menuBtn {
     display: block;
-  }
-
-  .logo {
-    margin: auto;
   }
 }
