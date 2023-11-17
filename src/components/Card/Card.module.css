@@ -1,0 +1,44 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 1rem;
+  background-color: #111111;
+  width: 200px;
+  height: 320px;
+  overflow: hidden;
+  color: white;
+  border-radius: 1rem;
+}
+
+.card:hover {
+  transform: scale(1.011);
+}
+
+.img {
+  width: 80%;
+  height: 60%;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* responsive size */
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .card {
+    width: 150px;
+    height: 220px;
+  }
+}

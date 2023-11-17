@@ -11,3 +11,11 @@
   gap: 1rem;
   width: 100%;
 }
+
+.title {
+  text-align: center;
+  color: #38d4ae;
+  font-weight: bold;
+  font-size: 3rem;
+  padding: 2rem;
+}
