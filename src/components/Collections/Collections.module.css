@@ -1,10 +1,12 @@
 .main {
   background-color: black;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .flex__box {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding: 1rem;
   flex-wrap: wrap;
@@ -18,4 +20,72 @@
   font-weight: bold;
   font-size: 3rem;
   padding: 2rem;
+}
+
+.collections__box {
+  display: flex;
+  width: 100%;
+  height: 250px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.4rem;
+  gap: 1rem;
+}
+
+.sm__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 30%;
+  height: 100%;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.bg__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  width: 40%;
+  height: 100%;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.grey {
+  background-color: #303030;
+}
+
+.white {
+  background-color: #e5e6ea;
+}
+.blue {
+  background-color: #1885f4;
+}
+.green {
+  background-color: #25ca6b;
+}
+.red {
+  background-color: #e1343e;
+}
+.yellow {
+  background-color: #f2be2c;
+}
+/* responsive size */
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .collections__box {
+    height: 100px;
+    padding: 0.4rem;
+    gap: 0.4rem;
+  }
 }
