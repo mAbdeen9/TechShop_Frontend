@@ -5,7 +5,8 @@ import Products from "./../../products.json";
 // eslint-disable-next-line no-unused-vars
 import Card from "../Card/Card";
 import { NavLink } from "react-router-dom";
-import AppleWatch from "../../assets/AppleWatch.png";
+
+import iPhones from "../../assets/iphones.png";
 
 function Collections() {
   return (
@@ -26,7 +27,7 @@ function Collections() {
           >
             Shop {">"}
           </NavLink>
-          <img src={AppleWatch} alt="Smartphone poster" />
+          <img src={iPhones} alt="Smartphone poster" />
         </div>
         <div className={Classes.collection__unit}>Computers</div>
         <div className={Classes.collection__unit}>Smart Watches</div>
