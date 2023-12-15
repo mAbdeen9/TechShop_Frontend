@@ -3,10 +3,11 @@ body {
   font-family: "PT Sans", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: gray !important;
+  background-color: black !important;
 }
 
 .active {
   opacity: 1 !important;
   text-decoration: underline !important;
 }
+ 

@@ -4,34 +4,45 @@ import Classes from "./Collections.module.css";
 import Products from "./../../products.json";
 // eslint-disable-next-line no-unused-vars
 import Card from "../Card/Card";
-import { NavLink } from "react-router-dom";
 
 import iPhones from "../../assets/iphones.png";
+import pc from "../../assets/computers.png";
+import CollectionCard from "../CollectionCard/CollectionCard";
 
 function Collections() {
   return (
     <div className={`container-fluid  ${Classes.main}`}>
       <h1 className={Classes.title}>Collections</h1>
       <div className={`container-fluid ${Classes.flex__box}`}>
-        <div className={Classes.collection__unit}>
-          <h2>Smartphones </h2>
-          <p>A wide variety of Smartphones </p>
-          <NavLink
-            style={{
-              textDecoration: "none",
-              color: "#1CB4F6",
-              fontWeight: "600",
-              fontSize: "18px",
-            }}
-            to="/Shop"
-          >
-            Shop {">"}
-          </NavLink>
-          <img src={iPhones} alt="Smartphone poster" />
-        </div>
-        <div className={Classes.collection__unit}>Computers</div>
-        <div className={Classes.collection__unit}>Smart Watches</div>
-        <div className={Classes.collection__unit}>Smart Watches</div>
+        <CollectionCard
+          title={"Smartphones"}
+          desc={"A wide variety of Smartphones"}
+          nav={"/Shop"}
+          img={iPhones}
+          imgAlt={"Smartphone poster"}
+        />
+        <CollectionCard
+          title={"Computers"}
+          desc={"A wide variety of Smartphones"}
+          nav={"/Shop"}
+          img={pc}
+          imgAlt={"Smartphone poster"}
+          imgStyle={{ marginRight: 40 }}
+        />
+        <CollectionCard
+          title={"Smartphones"}
+          desc={"A wide variety of Smartphones"}
+          nav={"/Shop"}
+          img={iPhones}
+          imgAlt={"Smartphone poster"}
+        />
+        <CollectionCard
+          title={"Smartphones"}
+          desc={"A wide variety of Smartphones"}
+          nav={"/Shop"}
+          img={iPhones}
+          imgAlt={"Smartphone poster"}
+        />
       </div>
     </div>
   );
