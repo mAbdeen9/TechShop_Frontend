@@ -8,19 +8,13 @@ import Card from "../Card/Card";
 import iPhones from "../../assets/iphones.png";
 import pc from "../../assets/computers.png";
 import CollectionCard from "../CollectionCard/CollectionCard";
+import smartWatch from "../../assets/smartWatch.png";
 
 function Collections() {
   return (
     <div className={`container-fluid  ${Classes.main}`}>
       <h1 className={Classes.title}>Collections</h1>
       <div className={`container-fluid ${Classes.flex__box}`}>
-        <CollectionCard
-          title={"Smartphones"}
-          desc={"A wide variety of Smartphones"}
-          nav={"/Shop"}
-          img={iPhones}
-          imgAlt={"Smartphone poster"}
-        />
         <CollectionCard
           title={"Computers"}
           desc={"A wide variety of Smartphones"}
@@ -36,12 +30,13 @@ function Collections() {
           img={iPhones}
           imgAlt={"Smartphone poster"}
         />
+
         <CollectionCard
-          title={"Smartphones"}
-          desc={"A wide variety of Smartphones"}
+          title={"Smartwatches"}
+          desc={"A wide variety of smartwatches"}
           nav={"/Shop"}
-          img={iPhones}
-          imgAlt={"Smartphone poster"}
+          img={smartWatch}
+          imgAlt={"smartwatches poster"}
         />
       </div>
     </div>
