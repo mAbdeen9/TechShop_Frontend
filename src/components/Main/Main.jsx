@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Main.module.css";
-import vector from "../../assets/Ecommerce_checkout_laptop-amico-removebg-preview.png";
+import mac from "../../assets/mac.png";
 
 function Main() {
   return (
@@ -19,7 +19,7 @@ function Main() {
             <span style={{ color: "#eab305" }}> Mac</span> needs and more.
           </p>
         </div>
-        <img src={vector} alt="icon" />
+        <img src={mac} alt="icon" />
       </div>
     </main>
   );
