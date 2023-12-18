@@ -1,6 +1,6 @@
 .main__container {
   width: 100%;
-  height: 500px;
+  min-height: 500px;
   background-color: black;
   color: white;
   display: flex;
@@ -8,10 +8,9 @@
   justify-content: center;
   align-items: center;
   letter-spacing: -1.5px;
-  margin-top: 50px;
 }
 
-.line {
+/* .line {
   background-color: #5200ff;
   display: block;
   position: relative;
@@ -21,13 +20,13 @@
   z-index: -1;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-}
+} */
 
-.main__container p {
+/* .main__container p {
   z-index: 1;
   font-size: 2.5rem;
   font-weight: bold;
-}
+} */
 
 .cover {
   display: flex;
@@ -36,7 +35,6 @@
 }
 
 .text__box {
-  width: 40%;
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
@@ -57,7 +55,11 @@
   color: #b1becd;
 }
 
-.main__container img {
+.sm__screen__img {
+  display: none;
+}
+
+.bg__screen__img {
   width: 400px;
   height: 400px;
   transform: translateY(-40px);
@@ -72,22 +74,35 @@
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
 
-  .main__container {
-    margin-top: 0px;
+  .text__box {
+    font-size: 2.5rem;
+    margin-top: 100px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  .main__container p {
-    z-index: 1;
-    font-size: 1.9rem;
-    font-weight: bold;
+  .sm__screen__img {
+    display: block;
+    width: 370px;
+    height: 370px;
+    transform: translateY(-40px);
+    -webkit-transform: translateY(-40px);
+    -moz-transform: translateY(-40px);
+    -ms-transform: translateY(-40px);
+    -o-transform: translateY(-40px);
+    margin-bottom: -50px;
+    margin-top: -110px;
   }
-  .text__box {
-    font-size: 1.6rem;
-    font-weight: bold;
+
+  .bg__screen__img {
+    display: none;
   }
 
   .smaller__text {
-    font-size: 1.4rem;
+    font-size: 2rem;
     transform: translateY(-13px);
     -webkit-transform: translateY(-13px);
     -moz-transform: translateY(-13px);
@@ -96,18 +111,22 @@
   }
 
   .text__box p {
-    font-size: 1.2rem;
-  }
-
-  .main__container img {
-    width: 230px;
-    height: 230px;
+    font-size: 1.8rem;
+    display: block;
   }
 }
 
-@media only screen and (max-width: 300px) {
-  .main__container img {
-    width: 160px;
-    height: 160px;
+@media only screen and (max-width: 360px) {
+  .sm__screen__img {
+    display: block;
+    width: 280px;
+    height: 280px;
+    transform: translateY(-40px);
+    -webkit-transform: translateY(-40px);
+    -moz-transform: translateY(-40px);
+    -ms-transform: translateY(-40px);
+    -o-transform: translateY(-40px);
+    margin-bottom: -40px;
+    margin-top: -70px;
   }
 }
