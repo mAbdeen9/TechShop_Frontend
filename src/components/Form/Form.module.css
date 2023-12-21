@@ -1,0 +1,110 @@
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.line {
+  background-color: #5200ff;
+  display: block;
+  position: relative;
+  bottom: 30px;
+  width: 100%;
+  height: 20px;
+  z-index: -1;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.contact__container p {
+  z-index: 1;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  width: fit-content;
+}
+
+.contact__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  width: 60%;
+  height: 100%;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgb(40, 40, 40);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 4px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.contact__content label {
+  padding-left: 7px;
+}
+
+.contact__content input {
+  outline: none;
+  border: 0px;
+  background-color: rgb(40, 40, 40);
+  color: #b0becd;
+  font-weight: bold;
+  padding-left: 7px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.contact__content textarea {
+  outline: none;
+  border: 0px;
+  background-color: rgb(40, 40, 40);
+  color: #b0becd;
+}
+
+.contact__form button {
+  background-color: #4382cb;
+  padding: 1rem;
+  border-radius: 7px;
+
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border: 0;
+  color: white;
+  font-weight: bolder;
+  font-size: 1rem;
+  align-self: flex-start;
+}
+
+.contact__form button:hover {
+  opacity: 0.8;
+}
+/* responsive size */
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .contact__form {
+    width: 100%;
+  }
+}

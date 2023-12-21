@@ -12,7 +12,8 @@ import smartWatch from "../../assets/smartWatch.png";
 
 function Collections() {
   return (
-    <div className={`container-fluid  ${Classes.main}`}>
+    <div className={` ${Classes.main}`}>
+      <span className={Classes.line}></span>
       <h1 className={Classes.title}>Collections</h1>
       <div className={`container-fluid ${Classes.flex__box}`}>
         <CollectionCard
@@ -39,6 +40,7 @@ function Collections() {
           imgAlt={"smartwatches poster"}
         />
       </div>
+      <span className={Classes.line}></span>
     </div>
   );
 }
