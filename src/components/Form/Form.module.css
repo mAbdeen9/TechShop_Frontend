@@ -6,6 +6,18 @@
   min-height: 500px;
 }
 
+.message__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
 .line {
   background-color: #5200ff;
   display: block;

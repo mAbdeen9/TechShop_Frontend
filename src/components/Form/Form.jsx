@@ -1,24 +1,16 @@
-import { useState } from "react";
 import classes from "./Form.module.css";
 import { IoMdSend } from "react-icons/io";
+import { useForm, ValidationError } from "@formspree/react";
 
 function Form() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (event) => {
-    setFormData({ ...formData, [event.target.name]: event.target.value });
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent default form submission
-
-    // Handle form submission logic here (e.g., send data to a server)
-    console.log("Form data:", formData);
-  };
+  const [state, handleSubmit] = useForm("xpzvaodg");
+  if (state.succeeded) {
+    return (
+      <p className={`container ${classes.message__container}`}>
+        Thanks for contacting us. <br /> we've received your message ✅
+      </p>
+    );
+  }
 
   return (
     <section className={`container ${classes.contact__container}`}>
@@ -28,42 +20,29 @@ function Form() {
       </p>
 
       <form
+        action="https://formspree.io/f/xpzvaodg"
+        method="POST"
         autoComplete="off"
         onSubmit={handleSubmit}
         className={classes.contact__form}
       >
         <div className={classes.contact__content}>
           <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+          <input type="text" id="name" name="name" required />
         </div>
         <div className={classes.contact__content}>
           <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
+          <input type="email" id="email" name="email" required />
         </div>
         <div className={classes.contact__content}>
           <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
+          <textarea id="message" name="message" required />
         </div>
+        <ValidationError
+          prefix="Message"
+          field="message"
+          errors={state.errors}
+        />
         <button type="submit">
           Send Message <IoMdSend />
         </button>
