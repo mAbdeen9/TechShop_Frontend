@@ -10,10 +10,10 @@ function MobileMenu({ onClick, scrollToElement }) {
         <button onClick={onClick}>x</button>
         <Logo />
         <div className={classes.sections__mobile}>
-          <NavLink to="/Home">Home</NavLink>
-          <NavLink to="/Shop">Shop</NavLink>
-          <NavLink to="/About">About</NavLink>
-          <NavLink to="/" onClick={scrollToElement}>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/shop">Shop</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/contact" onClick={scrollToElement}>
             Contact
           </NavLink>
         </div>
