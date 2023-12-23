@@ -13,19 +13,13 @@ function Form() {
   }
 
   return (
-    <section className={`container ${classes.contact__container}`}>
+    <section id="contact" className={`container ${classes.contact__container}`}>
       <p>
         Contact us
         <span className={classes.line} />
       </p>
 
-      <form
-        action="https://formspree.io/f/xpzvaodg"
-        method="POST"
-        autoComplete="off"
-        onSubmit={handleSubmit}
-        className={classes.contact__form}
-      >
+      <form onSubmit={handleSubmit} className={classes.contact__form}>
         <div className={classes.contact__content}>
           <label htmlFor="name">Name</label>
           <input type="text" id="name" name="name" required />

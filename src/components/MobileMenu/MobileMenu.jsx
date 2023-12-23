@@ -3,7 +3,7 @@ import Logo from "../Logo/Logo";
 import { NavLink } from "react-router-dom";
 import classes from "./MobileMenu.module.css";
 
-function MobileMenu({ onClick }) {
+function MobileMenu({ onClick, scrollToElement }) {
   return (
     <div className={classes.menuBurger}>
       <div className={classes.leftSide}>
@@ -13,7 +13,9 @@ function MobileMenu({ onClick }) {
           <NavLink to="/Home">Home</NavLink>
           <NavLink to="/Shop">Shop</NavLink>
           <NavLink to="/About">About</NavLink>
-          <NavLink to="/Contact">Contact</NavLink>
+          <NavLink to="/" onClick={scrollToElement}>
+            Contact
+          </NavLink>
         </div>
       </div>
       <div onClick={onClick} className={classes.rightSide}></div>

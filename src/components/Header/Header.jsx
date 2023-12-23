@@ -9,33 +9,46 @@ import CartIcon from "../Icons/CartIcon";
 function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(null);
 
-  const handleScroll = (event) => {
-    console.log(123);
-  };
-
-  const BurgerBtnHandler = () => {
+  const showMobileMenuHandler = () => {
     document.body.style.overflow = "hidden";
     setShowMobileMenu(true);
   };
 
-  const mobileMenuHandler = () => {
+  const hideMobileMenuHandler = () => {
     document.body.style.overflow = "unset";
     setShowMobileMenu(false);
   };
 
+  const scrollToElement = () => {
+    const element = document.getElementById("contact");
+    if (element) {
+      if (showMobileMenu) {
+        hideMobileMenuHandler();
+      }
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <header onScroll={handleScroll} className={Classes.full__container}>
-      {showMobileMenu && <MobileMenu onClick={mobileMenuHandler} />}
+    <header className={Classes.full__container}>
+      {showMobileMenu && (
+        <MobileMenu
+          onClick={hideMobileMenuHandler}
+          scrollToElement={scrollToElement}
+        />
+      )}
       <div className={`container ${Classes.big__screen__main}`}>
         <div className={Classes.menuBtn}>
-          <BurgerIcon onClick={BurgerBtnHandler} />
+          <BurgerIcon onClick={showMobileMenuHandler} />
         </div>
         <Logo />
         <div className={Classes.sections}>
           <NavLink to="/Home">Home</NavLink>
           <NavLink to="/Shop">Shop</NavLink>
           <NavLink to="/About">About</NavLink>
-          <NavLink to="/Contact">Contact</NavLink>
+          <NavLink to="/" onClick={scrollToElement}>
+            Contact
+          </NavLink>
         </div>
 
         <CartIcon />
