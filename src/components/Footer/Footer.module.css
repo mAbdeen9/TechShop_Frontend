@@ -1,0 +1,32 @@
+.footer__container {
+  height: 200px;
+  background-color: #0f0f0f;
+  color: #b0becd;
+  text-align: center;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.footer__container a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer__links div {
+  font-size: 3rem;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.copyright {
+  font-size: 1.3rem;
+}
