@@ -12,7 +12,7 @@ import smartWatch from "../../assets/smartWatch.png";
 
 function Collections() {
   return (
-    <div className={` ${Classes.main}`}>
+    <div id="shop" className={` ${Classes.main}`}>
       <span className={Classes.line}></span>
       <h1 className={Classes.title}>Collections</h1>
       <div className={`container-fluid ${Classes.flex__box}`}>

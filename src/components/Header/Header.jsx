@@ -19,8 +19,8 @@ function Header() {
     setShowMobileMenu(false);
   };
 
-  const scrollToElement = () => {
-    const element = document.getElementById("contact");
+  const scrollToElement = (id) => {
+    const element = document.getElementById(id);
     if (element) {
       if (showMobileMenu) {
         hideMobileMenuHandler();
@@ -44,9 +44,14 @@ function Header() {
         <Logo />
         <div className={Classes.sections}>
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/shop">Shop</NavLink>
+          <NavLink to="/shop" onClick={scrollToElement.bind(this, "shop")}>
+            Shop
+          </NavLink>
           <NavLink to="/about">About</NavLink>
-          <NavLink to="/contact" onClick={scrollToElement}>
+          <NavLink
+            to="/contact"
+            onClick={scrollToElement.bind(this, "contact")}
+          >
             Contact
           </NavLink>
         </div>

@@ -1,9 +1,12 @@
 import classes from "./Form.module.css";
 import { IoMdSend } from "react-icons/io";
 import { useForm, ValidationError } from "@formspree/react";
+import { useState } from "react";
 
 function Form() {
   const [state, handleSubmit] = useForm("xpzvaodg");
+  const [isLoading, setIsLoading] = useState(false);
+
   if (state.succeeded) {
     return (
       <p className={`container ${classes.message__container}`}>
@@ -12,14 +15,27 @@ function Form() {
     );
   }
 
+  if (state.errors) alert("Something went wrong try again 🙁");
+
+  const customSubmitHandler = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    try {
+      await handleSubmit(e);
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section id="contact" className={`container ${classes.contact__container}`}>
       <p>
         Contact us
         <span className={classes.line} />
       </p>
-
-      <form onSubmit={handleSubmit} className={classes.contact__form}>
+      <form onSubmit={customSubmitHandler} className={classes.contact__form}>
         <div className={classes.contact__content}>
           <label htmlFor="name">Name</label>
           <input type="text" id="name" name="name" required />
@@ -38,7 +54,8 @@ function Form() {
           errors={state.errors}
         />
         <button type="submit">
-          Send Message <IoMdSend />
+          {isLoading ? "Sending ..." : "Send Message "}
+          <IoMdSend />
         </button>
       </form>
     </section>

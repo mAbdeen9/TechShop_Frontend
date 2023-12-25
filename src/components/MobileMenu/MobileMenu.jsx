@@ -11,9 +11,14 @@ function MobileMenu({ onClick, scrollToElement }) {
         <Logo />
         <div className={classes.sections__mobile}>
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/shop">Shop</NavLink>
+          <NavLink to="/shop" onClick={scrollToElement.bind(this, "shop")}>
+            Shop
+          </NavLink>
           <NavLink to="/about">About</NavLink>
-          <NavLink to="/contact" onClick={scrollToElement}>
+          <NavLink
+            to="/contact"
+            onClick={scrollToElement.bind(this, "contact")}
+          >
             Contact
           </NavLink>
         </div>
