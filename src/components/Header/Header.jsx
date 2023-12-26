@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Classes from "./Header.module.css";
 import { NavLink } from "react-router-dom";
 import Logo from "../Logo/Logo";
@@ -9,14 +9,21 @@ import CartIcon from "../Icons/CartIcon";
 function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(null);
 
+  useEffect(() => {
+    // Cleanup function
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, []);
+
   const showMobileMenuHandler = () => {
     document.body.style.overflow = "hidden";
-    setShowMobileMenu(true);
+    setShowMobileMenu((state) => !state);
   };
 
   const hideMobileMenuHandler = () => {
     document.body.style.overflow = "unset";
-    setShowMobileMenu(false);
+    setShowMobileMenu((state) => !state);
   };
 
   const scrollToElement = (id) => {
