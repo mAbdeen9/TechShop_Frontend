@@ -27,13 +27,15 @@ function Header() {
   };
 
   const scrollToElement = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      if (showMobileMenu) {
-        hideMobileMenuHandler();
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        if (showMobileMenu) {
+          hideMobileMenuHandler();
+        }
+        element.scrollIntoView({ behavior: "smooth" });
       }
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    }, [1]);
   };
 
   return (
@@ -50,7 +52,7 @@ function Header() {
         </div>
         <Logo />
         <div className={Classes.sections}>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/home">Home</NavLink>
           <NavLink to="/shop" onClick={scrollToElement.bind(this, "shop")}>
             Shop
           </NavLink>
