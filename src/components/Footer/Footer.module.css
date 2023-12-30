@@ -1,5 +1,5 @@
 .footer__container {
-  height: 200px;
+  height: 400px;
   background-color: #0f0f0f;
   color: #b0becd;
   text-align: center;
@@ -13,6 +13,19 @@
   align-content: center;
   height: 100%;
   width: 100%;
+}
+
+.images__copyrights {
+  text-align: center;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.images__copyrights p {
+  font-size: 10px;
+  text-align: center;
 }
 
 .footer__container a {

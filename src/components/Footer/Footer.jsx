@@ -25,6 +25,17 @@ export default function Footer() {
             <FaYoutube />
           </Link>
         </div>
+        <div className={classes.images__copyrights}>
+          <p>
+            iPhones Image by pikisuperstar on Freepik
+            <br />
+            Apple watch Image by catalyststuff on Freepik
+            <br />
+            hacking boy Image by catalyststuff on Freepik
+            <br />
+            PC Images by storyset on Freepik
+          </p>
+        </div>
         <p className={classes.copyright}>
           Copyright &copy; {new Date().getFullYear()}
           <br />
