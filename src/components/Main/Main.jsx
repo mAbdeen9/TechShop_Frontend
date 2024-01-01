@@ -4,7 +4,7 @@ import mac from "../../assets/mac.png";
 
 function Main() {
   return (
-    <main className={classes.main__container}>
+    <main id="home" className={classes.main__container}>
       <div className={`container ${classes.cover}`}>
         <div className={classes.text__box}>
           <div>React App</div>

@@ -52,7 +52,9 @@ function Header() {
         </div>
         <Logo />
         <div className={Classes.sections}>
-          <NavLink to="/home">Home</NavLink>
+          <NavLink to="/home" onClick={scrollToElement.bind(this, "home")}>
+            Home
+          </NavLink>
           <NavLink to="/shop" onClick={scrollToElement.bind(this, "shop")}>
             Shop
           </NavLink>
