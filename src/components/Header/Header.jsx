@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Classes from "./Header.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import BurgerIcon from "../Icons/BurgerIcon";
 import CartIcon from "../Icons/CartIcon";
 
 function Header() {
+  const navigate = useNavigate();
   const [showMobileMenu, setShowMobileMenu] = useState(null);
 
   useEffect(() => {
@@ -66,8 +67,7 @@ function Header() {
             Contact
           </NavLink>
         </div>
-
-        <CartIcon />
+        <CartIcon onClick={() => navigate("/cart")} />
       </div>
     </header>
   );

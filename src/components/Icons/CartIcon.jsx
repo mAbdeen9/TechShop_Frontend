@@ -1,13 +1,13 @@
 import React from "react";
 import { AiOutlineShopping } from "react-icons/ai";
 
-function CartIcon() {
+function CartIcon({ onClick }) {
   return (
     <AiOutlineShopping
       size={24}
       opacity={0.9}
       cursor={"pointer"}
-      onClick={() => console.log("cart icon clicked!")}
+      onClick={onClick}
     />
   );
 }

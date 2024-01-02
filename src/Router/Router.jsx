@@ -5,7 +5,7 @@ import PageLoading from "../components/Loading/PageLoading";
 
 const Home = React.lazy(() => import("../pages/Home"));
 const About = React.lazy(() => import("../pages/About"));
-
+const Cart = React.lazy(() => import("../pages/Cart"));
 function Router() {
   return (
     <Fragment>
@@ -13,6 +13,7 @@ function Router() {
         <Routes>
           {<Route path="/home" element={<Home />} />}
           {<Route path="/about" element={<About />} />}
+          {<Route path="/cart" element={<Cart />} />}
           {<Route path="*" element={<Home />} />}
         </Routes>
       </Suspense>

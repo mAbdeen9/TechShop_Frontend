@@ -1,10 +1,11 @@
 import classes from "./AboutSection.module.css";
-import hackingBoy from "../../assets/hackingBoy.png";
+import HandCoding from "../../assets/Handcoding.gif";
+
 function AboutSection() {
   return (
-    <section className="container">
+    <section className={`container ${classes.about__section}`}>
       <div className={classes.about__container}>
-        <img src={hackingBoy} alt="Coding boy"></img>
+        <img src={HandCoding} alt="hand coding" />
         <p>
           <span>Tech shop</span> is a passion project built from the ground up
           with React JS to hone my front-end development skills . This simulated
