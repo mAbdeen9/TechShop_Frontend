@@ -40,7 +40,7 @@ img {
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
-  section {
+  .about__section {
     height: calc(100svh);
   }
   .about__container {

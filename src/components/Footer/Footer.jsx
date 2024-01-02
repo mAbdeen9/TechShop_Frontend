@@ -31,8 +31,6 @@ export default function Footer() {
             <br />
             Apple watch Image by catalyststuff on Freepik
             <br />
-            hacking boy Image by catalyststuff on Freepik
-            <br />
             PC Images by storyset on Freepik
           </p>
         </div>
