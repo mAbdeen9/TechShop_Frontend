@@ -8,10 +8,19 @@ function Form() {
   const [isLoading, setIsLoading] = useState(false);
 
   if (state.succeeded) {
+    setTimeout(() => {
+      const contact = document.getElementById("contact");
+      contact.scrollIntoView({ behavior: "smooth" });
+    }, [1]);
     return (
-      <p className={`container ${classes.message__container}`}>
-        Thanks for contacting us. <br /> we've received your message ✅
-      </p>
+      <section
+        id="contact"
+        className={`container ${classes.contact__container}`}
+      >
+        <p className={`container ${classes.message__container}`}>
+          Thanks for contacting us. <br /> we've received your message ✅
+        </p>
+      </section>
     );
   }
 
