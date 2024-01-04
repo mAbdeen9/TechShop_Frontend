@@ -1,9 +1,5 @@
 import React from "react";
 import Classes from "./Collections.module.css";
-// eslint-disable-next-line no-unused-vars
-import Products from "./../../products.json";
-// eslint-disable-next-line no-unused-vars
-import Card from "../Card/Card";
 
 import iPhones from "../../assets/iphones.png";
 import pc from "../../assets/computers.png";
