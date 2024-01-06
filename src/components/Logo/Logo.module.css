@@ -1,14 +1,15 @@
 .logo {
   color: #cce4cb;
   font-size: 2rem;
-  font-weight: bold;
-  letter-spacing: -1px;
+  font-weight: 400;
+  letter-spacing: -0.7px;
   user-select: none;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Tomorrow", sans-serif;
+  cursor: pointer;
 }
 
 .logo span {

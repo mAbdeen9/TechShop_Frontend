@@ -1,9 +1,14 @@
 import Classes from "./CollectionCard.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
-const CollectionCard = ({ title, desc, nav, img, imgAlt, imgStyle }) => {
+const CollectionCard = ({ title, desc, img, imgAlt, imgStyle }) => {
+  const navigate = useNavigate();
+  const cardHandler = () => {
+    navigate(`/products/${title}`, {});
+  };
+
   return (
-    <div className={Classes.collection__unit}>
+    <div className={Classes.collection__unit} onClick={cardHandler}>
       <h2>{title}</h2>
       <p>{desc}</p>
       <NavLink
@@ -13,7 +18,6 @@ const CollectionCard = ({ title, desc, nav, img, imgAlt, imgStyle }) => {
           fontWeight: "600",
           fontSize: "18px",
         }}
-        to={nav}
       >
         Shop {">"}
       </NavLink>

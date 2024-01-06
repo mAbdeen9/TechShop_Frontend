@@ -15,7 +15,6 @@ function Collections() {
         <CollectionCard
           title={"Computers"}
           desc={"A wide variety of Smartphones"}
-          nav={"/Shop"}
           img={pc}
           imgAlt={"Smartphone poster"}
           imgStyle={{ marginRight: 40 }}
@@ -23,15 +22,12 @@ function Collections() {
         <CollectionCard
           title={"Smartphones"}
           desc={"A wide variety of Smartphones"}
-          nav={"/Shop"}
           img={iPhones}
           imgAlt={"Smartphone poster"}
         />
-
         <CollectionCard
           title={"Smartwatches"}
           desc={"A wide variety of smartwatches"}
-          nav={"/Shop"}
           img={smartWatch}
           imgAlt={"smartwatches poster"}
         />
