@@ -18,7 +18,7 @@ function Form() {
         className={`container ${classes.contact__container}`}
       >
         <p className={`container ${classes.message__container}`}>
-          Thanks for contacting us. <br /> we've received your message ✅
+          Thanks for contacting us. <br /> we've received your message
         </p>
       </section>
     );
