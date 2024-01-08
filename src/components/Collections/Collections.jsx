@@ -1,6 +1,5 @@
 import React from "react";
 import Classes from "./Collections.module.css";
-
 import iPhones from "../../assets/iphones.png";
 import pc from "../../assets/computers.png";
 import CollectionCard from "../CollectionCard/CollectionCard";

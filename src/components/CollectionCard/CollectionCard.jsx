@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 const CollectionCard = ({ title, desc, img, imgAlt, imgStyle }) => {
   const navigate = useNavigate();
   const cardHandler = () => {
-    navigate(`/products/${title}`, {});
+    navigate(`/products/${title.toLowerCase()}`, {});
   };
 
   return (
