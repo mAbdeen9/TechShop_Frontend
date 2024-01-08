@@ -12,16 +12,19 @@ export default function Footer() {
     <footer className={`container-fluid ${classes.footer__container}`}>
       <div className={`container ${classes.footer__links}`}>
         <div>
-          <Link>
+          <Link aria-label="Github" to="https://github.com/mAbdeen9">
             <FaGithub />
           </Link>
-          <Link>
+          <Link aria-label="Instagram" to="https://www.instagram.com/moe_ab92/">
             <FaInstagram />
           </Link>
-          <Link>
+          <Link
+            aria-label="Linkedin"
+            to="https://www.linkedin.com/in/moe-abdeen/"
+          >
             <FaLinkedin />
           </Link>
-          <Link>
+          <Link aria-label="Youtube" to="https://www.youtube.com/@m7md9110">
             <FaYoutube />
           </Link>
         </div>
