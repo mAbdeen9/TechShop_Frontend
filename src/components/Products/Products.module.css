@@ -6,3 +6,20 @@
   margin-top: 1rem;
   color: #fcfcfc;
 }
+
+.products__box {
+  margin-top: 1rem;
+  display: flex;
+}
+
+.products__box h2 {
+  font-style: italic;
+  font-size: 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .products__box {
+    justify-content: center;
+  }
+}

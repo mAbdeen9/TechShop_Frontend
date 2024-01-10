@@ -1,14 +1,14 @@
 .logo {
   color: #cce4cb;
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: 1.8rem;
+  font-weight: bold;
   letter-spacing: -0.7px;
   user-select: none;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: "Tomorrow", sans-serif;
+  font-family: "Lemon", serif;
   cursor: pointer;
 }
 
@@ -20,6 +20,11 @@
   text-align: center;
   color: #3dfecf;
   letter-spacing: normal;
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
 }
 
 /* responsive size */
