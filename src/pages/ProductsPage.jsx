@@ -7,6 +7,7 @@ function ProductsPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
       <Header />
