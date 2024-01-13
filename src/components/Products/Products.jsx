@@ -1,11 +1,11 @@
 import { useLocation } from "react-router-dom";
 import styles from "./Products.module.css";
-// import fakeProduct from "../../fakeProducts.json";
 import Card from "../Card/Card";
 import { useEffect, useState } from "react";
 import fakeTechProducts from "../../fakeTechProducts.json";
 
 function Products(props) {
+  const [data, setData] = useState([]);
   const [emoji, setEmoji] = useState();
   const location = useLocation();
   const headerText = location.pathname.split("/").pop();
@@ -16,8 +16,16 @@ function Products(props) {
   };
 
   useEffect(() => {
+    setData(() => {
+      return fakeTechProducts.filter(
+        (product) => product.category === headerText
+      );
+    });
+
+    window.scrollTo(0, 0);
     emojiSelector();
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [headerText]);
 
   return (
     <section className={`container-fluid ${styles.box}`}>
@@ -30,10 +38,10 @@ function Products(props) {
           <div className={styles.line}></div>
         </div>
         <div className={styles.products__cards}>
-          {fakeTechProducts.map((item) => {
+          {data?.map((item) => {
             return (
               <Card
-                img={require("../../assets/products/smartphones/iphone12.png")}
+                img={item.image}
                 title={item.title}
                 key={item.id}
                 price={item.price}

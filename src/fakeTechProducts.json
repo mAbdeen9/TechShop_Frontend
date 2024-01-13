@@ -1,10 +1,24 @@
 [
   {
     "id": 1,
-    "title": "iPhone 15 Pro",
-    "price": 1200,
+    "title": "iPhone 12 Pro",
+    "price": 999,
+    "description": [
+      {
+        "Finish": "Silver,Graphite,Gold,Pacific Blue",
+        "Display": "Super Retina XDR display , 6.1‑inch (diagonal) all‑screen OLED display , 2532‑by‑1170-pixel resolution at 460 ppi",
+        "Chip": "A14 Bionic chip , Next‑generation Neural Engine",
+        "Camera": "Pro 12MP camera system: Ultra Wide, Wide, and Telephoto cameras ,Ultra Wide: ƒ/2.4 aperture and 120° field of view, Wide: ƒ/1.6 aperture , Telephoto: ƒ/2.0 aperture"
+      }
+    ],
+    "image": "https://i.ibb.co/hyj00Nr/iphone12.png"
+  },
+  {
+    "id": 2,
+    "title": "iPhone 12 Pro",
+    "price": 999,
     "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
     "category": "Smartphones",
-    "image": "../../assets/products/smartphones/iphone12.png"
+    "image": "https://i.ibb.co/hyj00Nr/iphone12.png"
   }
 ]
