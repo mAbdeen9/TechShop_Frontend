@@ -1,5 +1,5 @@
 import classes from "./Card.module.css";
-import { FaCartArrowDown } from "react-icons/fa6";
+import { FaArrowCircleRight } from "react-icons/fa";
 
 function Card({ img, title, price, id }) {
   return (
@@ -8,7 +8,7 @@ function Card({ img, title, price, id }) {
       <div className={classes.title}>{title.slice(0, 19)}</div>
       <div className={classes.price}>${price}</div>
       <div className={classes.addToCart__btn}>
-        ADD TO CART <FaCartArrowDown size={"22px"} />
+        MORE DETAILS <FaArrowCircleRight size={"18px"} />
       </div>
     </div>
   );

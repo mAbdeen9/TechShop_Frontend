@@ -1,8 +1,9 @@
 import { useLocation } from "react-router-dom";
 import styles from "./Products.module.css";
-import fakeProduct from "../../fakeProducts.json";
+// import fakeProduct from "../../fakeProducts.json";
 import Card from "../Card/Card";
 import { useEffect, useState } from "react";
+import fakeTechProducts from "../../fakeTechProducts.json";
 
 function Products(props) {
   const [emoji, setEmoji] = useState();
@@ -21,16 +22,18 @@ function Products(props) {
   return (
     <section className={`container-fluid ${styles.box}`}>
       <div className={`container ${styles.products__box}`}>
-        <div className={styles.line}></div>
-        <h2>
-          {headerText} <span>{emoji}</span>
-        </h2>
-        <div className={styles.line}></div>
+        <div className={styles.header__box}>
+          <div className={styles.line}></div>
+          <h2>
+            {headerText} <span>{emoji}</span>
+          </h2>
+          <div className={styles.line}></div>
+        </div>
         <div className={styles.products__cards}>
-          {fakeProduct.map((item) => {
+          {fakeTechProducts.map((item) => {
             return (
               <Card
-                img={item.image}
+                img={require("../../assets/products/smartphones/iphone12.png")}
                 title={item.title}
                 key={item.id}
                 price={item.price}
