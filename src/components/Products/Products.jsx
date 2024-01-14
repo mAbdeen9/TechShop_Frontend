@@ -4,10 +4,11 @@ import Card from "../Card/Card";
 import { useEffect, useState } from "react";
 import fakeTechProducts from "../../fakeTechProducts.json";
 
-function Products(props) {
+function Products() {
   const [data, setData] = useState([]);
   const [emoji, setEmoji] = useState();
   const location = useLocation();
+  console.log(location);
   const headerText = location.pathname.split("/").pop();
   const emojiSelector = () => {
     if (headerText === "Smartwatches") setEmoji("⌚️");
