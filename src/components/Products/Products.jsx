@@ -8,7 +8,6 @@ function Products() {
   const [data, setData] = useState([]);
   const [emoji, setEmoji] = useState();
   const location = useLocation();
-  console.log(location);
   const headerText = location.pathname.split("/").pop();
   const emojiSelector = () => {
     if (headerText === "Smartwatches") setEmoji("⌚️");
@@ -44,6 +43,7 @@ function Products() {
               <Card
                 img={item.image}
                 title={item.title}
+                id={item.id}
                 key={item.id}
                 price={item.price}
               />
