@@ -1,5 +1,17 @@
-.box {
-  height: 500px;
-  background-color: red;
+.product__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 650px;
+  background-color: gray;
   color: white;
+}
+
+/* responsive size */
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .product__box {
+    flex-direction: column;
+  }
 }
