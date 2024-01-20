@@ -2,11 +2,11 @@ import classes from "./Card.module.css";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-function Card({ img, title, price, id }) {
+function Card({ img, title, price, id, item }) {
   const navigate = useNavigate();
   return (
     <div
-      onClick={() => navigate(`/product/${id}`)}
+      onClick={() => navigate(`/product/${id}`, { state: item })}
       key={id}
       className={classes.card}
     >

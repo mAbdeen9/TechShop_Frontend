@@ -41,6 +41,7 @@ function Products() {
           {data?.map((item) => {
             return (
               <Card
+                item={item}
                 img={item.image}
                 title={item.title}
                 id={item.id}

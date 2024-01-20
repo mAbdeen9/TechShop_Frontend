@@ -11,7 +11,12 @@
         "Camera": "Pro 12MP camera system: Ultra Wide, Wide, and Telephoto cameras ,Ultra Wide: ƒ/2.4 aperture and 120° field of view, Wide: ƒ/1.6 aperture , Telephoto: ƒ/2.0 aperture"
       }
     ],
-    "image": "https://i.ibb.co/hyj00Nr/iphone12.png"
+    "category": "Smartphones",
+    "image": "https://i.ibb.co/hyj00Nr/iphone12.png",
+    "gallery": [
+      "https://i.ibb.co/hyj00Nr/iphone12.png",
+      "https://i.ibb.co/hyj00Nr/iphone12.png"
+    ]
   },
   {
     "id": 2,
@@ -19,6 +24,10 @@
     "price": 999,
     "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
     "category": "Smartphones",
-    "image": "https://i.ibb.co/hyj00Nr/iphone12.png"
+    "image": "https://i.ibb.co/hyj00Nr/iphone12.png",
+    "gallery": [
+      "https://i.ibb.co/hyj00Nr/iphone12.png",
+      "https://i.ibb.co/hyj00Nr/iphone12.png"
+    ]
   }
 ]

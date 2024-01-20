@@ -1,10 +1,45 @@
 .product__box {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 1rem;
+  justify-content: space-between;
   min-height: 650px;
   background-color: gray;
   color: white;
+}
+
+.gallery__info {
+  display: flex;
+  gap: 0.5rem;
+  width: 50%;
+  background-color: red;
+}
+
+.gallery__thumbs {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100px;
+  overflow: hidden;
+  padding: 5px;
+}
+.gallery__thumbs img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.gallery__main {
+  padding: 5px;
+  background-color: rebeccapurple;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery__main img {
+  cursor: pointer;
 }
 
 /* responsive size */
@@ -13,5 +48,17 @@
   /* For mobile phones: */
   .product__box {
     flex-direction: column;
+  }
+
+  .gallery__info {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .gallery__thumbs {
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 }
