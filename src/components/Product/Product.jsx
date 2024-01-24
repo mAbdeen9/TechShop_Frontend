@@ -4,8 +4,23 @@ import fakeTechProducts from "../../fakeTechProducts.json";
 import { useEffect, useState } from "react";
 
 const Product = () => {
-  const [productInfo, setProductInfo] = useState({});
   const { id } = useParams();
+  const [productInfo, setProductInfo] = useState({});
+  const [galleryImageSelector, setGalleryImageSelector] = useState("");
+
+  const changeImageHandler = (index) => {
+    const galleryArray = document.querySelectorAll(".galleryElements");
+    galleryArray.forEach((image, imageIndex) => {
+      if (index === imageIndex) {
+        image.classList.add("activeImage");
+      } else {
+        image.classList.remove("activeImage");
+      }
+    });
+
+    const selectedImage = productInfo.gallery[index];
+    setGalleryImageSelector(selectedImage);
+  };
 
   useEffect(() => {
     const product = fakeTechProducts.find((p) => p.id === +id);
@@ -17,13 +32,25 @@ const Product = () => {
   return (
     <section className={`container ${styles.product__box}`}>
       <div className={styles.gallery__info}>
-        <div className={styles.gallery__thumbs}>
+        <div id="galleryElements" className={styles.gallery__thumbs}>
           {productInfo.gallery?.map((imageURL, index) => {
-            return <img key={index} src={imageURL} alt="Product" />;
+            return (
+              <img
+                className="galleryElements"
+                onClick={() => changeImageHandler(index)}
+                key={index}
+                src={imageURL}
+                alt="Product"
+              />
+            );
           })}
         </div>
         <div className={styles.gallery__main}>
-          <img src={productInfo.image} alt="Product" />
+          {galleryImageSelector ? (
+            <img src={galleryImageSelector} alt="Product" />
+          ) : (
+            <img src={productInfo.image} alt="Product" />
+          )}
         </div>
       </div>
 
