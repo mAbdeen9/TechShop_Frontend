@@ -3,15 +3,10 @@
   padding: 2rem;
   justify-content: space-between;
   min-height: 750px;
-  background-color: #141414;
+  background-color: black;
   color: white;
   margin-top: 10px;
   margin-bottom: 10px;
-  border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
 }
 
 .gallery__info {
