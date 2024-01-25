@@ -12,7 +12,7 @@
 .gallery__info {
   display: flex;
   gap: 0.5rem;
-  width: 50%;
+  width: 60%;
 }
 
 .gallery__thumbs {
@@ -43,6 +43,27 @@
   width: 450px;
   height: 450px;
   cursor: pointer;
+}
+
+.product__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 33%;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.product__info h1 {
+  font-style: italic;
+}
+
+.product__info__price {
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 /* responsive size */
@@ -77,6 +98,10 @@
 
   .gallery__thumbs {
     flex-direction: row;
+    width: 100%;
+  }
+
+  .product__info {
     width: 100%;
   }
 }

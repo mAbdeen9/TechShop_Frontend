@@ -55,9 +55,12 @@ const Product = () => {
       </div>
 
       <div className={styles.product__info}>
-        <h2>PRODUCT NAME</h2>
-        <div className={styles.product__info__price}>$PRICE DIV</div>
-        <div className={styles.product__info__description}>
+        <h1>PRODUCT NAME</h1>
+        <div className={styles.product__info__price}>$29.99</div>
+        <p className={styles.product__info__description}>
+          product__info__description__general
+        </p>
+        <div className={styles.product__info__specs}>
           <ul>
             <li>Julia</li>
             <li>Mustfa</li>

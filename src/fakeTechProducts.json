@@ -3,7 +3,8 @@
     "id": 1,
     "title": "iPhone 12 Pro",
     "price": 999,
-    "description": [
+    "description": "Your perfect pack for everyday use ",
+    "specs": [
       {
         "Finish": "Silver,Graphite,Gold,Pacific Blue",
         "Display": "Super Retina XDR display , 6.1‑inch (diagonal) all‑screen OLED display , 2532‑by‑1170-pixel resolution at 460 ppi",
@@ -11,18 +12,6 @@
         "Camera": "Pro 12MP camera system: Ultra Wide, Wide, and Telephoto cameras ,Ultra Wide: ƒ/2.4 aperture and 120° field of view, Wide: ƒ/1.6 aperture , Telephoto: ƒ/2.0 aperture"
       }
     ],
-    "category": "Smartphones",
-    "image": "https://i.ibb.co/hyj00Nr/iphone12.png",
-    "gallery": [
-      "https://i.ibb.co/hyj00Nr/iphone12.png",
-      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-compare-iphone-14-202309?wid=384&hei=512&fmt=jpeg&qlt=90&.v=1693516153040"
-    ]
-  },
-  {
-    "id": 2,
-    "title": "iPhone 12 Pro",
-    "price": 999,
-    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
     "category": "Smartphones",
     "image": "https://i.ibb.co/hyj00Nr/iphone12.png",
     "gallery": [
