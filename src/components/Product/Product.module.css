@@ -94,6 +94,7 @@
 .product__info__specs li {
   padding: 0.4rem;
   text-align: left;
+  font-size: 0.9rem;
 }
 
 .add__to_cart button {
