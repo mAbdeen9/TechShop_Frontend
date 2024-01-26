@@ -8,6 +8,8 @@ const Product = () => {
   const [productInfo, setProductInfo] = useState({});
   const [galleryImageSelector, setGalleryImageSelector] = useState("");
 
+  console.log(Object.entries(productInfo.specs || {}));
+
   const changeImageHandler = (index) => {
     const galleryArray = document.querySelectorAll(".galleryElements");
     galleryArray.forEach((image, imageIndex) => {
@@ -55,21 +57,35 @@ const Product = () => {
       </div>
 
       <div className={styles.product__info}>
-        <h1>PRODUCT NAME</h1>
-        <div className={styles.product__info__price}>$29.99</div>
+        <h1>{productInfo?.title}</h1>
+        <div className={styles.product__info__price}>${productInfo?.price}</div>
         <p className={styles.product__info__description}>
-          product__info__description__general
+          {productInfo?.description}
         </p>
         <div className={styles.product__info__specs}>
-          <ul>
-            <li>Julia</li>
-            <li>Mustfa</li>
-            <li>Deena</li>
-            <li>Mohamed</li>
-          </ul>
+          {Object.entries(productInfo.specs || {}).map((e, i) => {
+            return (
+              <li key={i}>
+                <span
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "1.2rem",
+                  }}
+                >
+                  {e[0]} :&nbsp;{" "}
+                </span>
+                {e[1]}
+              </li>
+            );
+          })}
         </div>
+        <div className={styles.line}></div>
         <div className={styles.add__to_cart}>
-          <select name="" id=""></select>
+          <select name="count" id="count">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
           <button>ADD TO CART</button>
         </div>
       </div>

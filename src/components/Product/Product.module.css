@@ -49,7 +49,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
   width: 33%;
   padding: 1rem;
   gap: 1rem;
@@ -60,10 +59,70 @@
 }
 
 .product__info__price {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 600;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.product__info__description {
+  font-weight: bold;
+}
+
+.product__info__specs {
+  font-size: 1.1rem;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  border-radius: 1rem;
+  background-color: #252525;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.add__to_cart {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.product__info__specs li {
+  padding: 0.4rem;
+  text-align: left;
+}
+
+.add__to_cart button {
+  background-color: #e41f2b;
+  color: white;
+  border: 0;
+  font-weight: bold;
+  clip-path: polygon(18px 0%, 100% 0%, calc(100% - 18px) 100%, 0% 100%);
+  -webkit-clip-path: polygon(18px 0%, 100% 0%, calc(100% - 18px) 100%, 0% 100%);
+  padding: 16px 72px;
+  text-align: center;
+}
+
+.add__to_cart button:hover {
+  opacity: 0.7;
+}
+
+.add__to_cart select {
+  background-color: transparent;
+  align-items: center;
+  border: 1px solid #2e2e2e;
+  padding: 1rem 2rem;
+  margin: 0;
+  justify-self: center;
+  cursor: pointer;
+  color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 /* responsive size */
@@ -103,5 +162,9 @@
 
   .product__info {
     width: 100%;
+  }
+
+  .add__to_cart button {
+    padding: 8px 34px;
   }
 }
