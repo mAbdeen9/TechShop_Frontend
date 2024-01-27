@@ -2,12 +2,14 @@ import { useParams } from "react-router-dom";
 import styles from "./Product.module.css";
 import fakeTechProducts from "../../fakeTechProducts.json";
 import { useEffect, useState } from "react";
+import Modal from "../Modal/Modal";
 
 const Product = () => {
   const { id } = useParams();
   const [productInfo, setProductInfo] = useState({});
   const [galleryImageSelector, setGalleryImageSelector] = useState("");
   const [count, setCount] = useState("1");
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const product = fakeTechProducts.find((p) => p.id === +id);
@@ -35,6 +37,7 @@ const Product = () => {
   const addToCartHandler = () => {
     const product = { ...productInfo, count };
     console.log(product);
+    setShowModal(true);
   };
 
   return (
@@ -95,6 +98,14 @@ const Product = () => {
           <button onClick={addToCartHandler}>ADD TO CART</button>
         </div>
       </div>
+
+      {showModal && (
+        <Modal
+          onClick={(e) =>
+            e.target.className.includes("backdrop") && setShowModal(false)
+          }
+        ></Modal>
+      )}
     </section>
   );
 };
