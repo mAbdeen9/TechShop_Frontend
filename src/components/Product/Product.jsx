@@ -7,8 +7,14 @@ const Product = () => {
   const { id } = useParams();
   const [productInfo, setProductInfo] = useState({});
   const [galleryImageSelector, setGalleryImageSelector] = useState("");
+  const [count, setCount] = useState("1");
 
-  console.log(Object.entries(productInfo.specs || {}));
+  useEffect(() => {
+    const product = fakeTechProducts.find((p) => p.id === +id);
+    if (product) {
+      setProductInfo(product);
+    }
+  }, [id]);
 
   const changeImageHandler = (index) => {
     const galleryArray = document.querySelectorAll(".galleryElements");
@@ -24,12 +30,12 @@ const Product = () => {
     setGalleryImageSelector(selectedImage);
   };
 
-  useEffect(() => {
-    const product = fakeTechProducts.find((p) => p.id === +id);
-    if (product) {
-      setProductInfo(product);
-    }
-  }, [id]);
+  const countValueHandler = (e) => setCount(e.target.value);
+
+  const addToCartHandler = () => {
+    const product = { ...productInfo, count };
+    console.log(product);
+  };
 
   return (
     <section className={`container ${styles.product__box}`}>
@@ -81,12 +87,12 @@ const Product = () => {
         </div>
         <div className={styles.line}></div>
         <div className={styles.add__to_cart}>
-          <select name="count" id="count">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
+          <select onChange={countValueHandler} name="count">
+            <option value={1}>1</option>
+            <option value={2}>2</option>
+            <option value={3}>3</option>
           </select>
-          <button>ADD TO CART</button>
+          <button onClick={addToCartHandler}>ADD TO CART</button>
         </div>
       </div>
     </section>
