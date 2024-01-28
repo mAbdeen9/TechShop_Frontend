@@ -104,7 +104,27 @@ const Product = () => {
           onClick={(e) =>
             e.target.className.includes("backdrop") && setShowModal(false)
           }
-        ></Modal>
+        >
+          <div>
+            <div>✔️ ADDED TO CART</div>
+            <div>X</div>
+          </div>
+          <div>
+            <img src="" alt="" />
+            <div>
+              <p>PRODUCT NAME</p>
+              <p>PRICE </p>
+              <p>Quantity</p>
+            </div>
+          </div>
+          <div>
+            <div>Cart subtotal (17 items):</div>
+            <div>$505.00</div>
+          </div>
+          <div>
+            <button>VIEW CART</button>
+          </div>
+        </Modal>
       )}
     </section>
   );
