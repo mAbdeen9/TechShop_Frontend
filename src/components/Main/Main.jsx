@@ -7,7 +7,7 @@ function Main() {
     <main id="home" className={classes.main__container}>
       <div className={`container ${classes.cover}`}>
         <div className={classes.text__box}>
-          <div>React App</div>
+          <div style={{ color: "#CCE4CB" }}>React App</div>
           <div className={classes.smaller__text}>Tech Shop </div>
           <img className={classes.sm__screen__img} src={mac} alt="icon" />
           <p>
