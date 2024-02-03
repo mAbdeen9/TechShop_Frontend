@@ -105,12 +105,34 @@ const Product = () => {
             e.target.className.includes("backdrop") && setShowModal(false)
           }
         >
-          <div>
-            <div>✔️ ADDED TO CART</div>
-            <div>X</div>
+          <div className={styles.modal__header}>
+            <div>
+              <svg
+                width="24"
+                height="28"
+                viewBox="0 0 25 25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 9.17l7.926 7.927L20.889 1"
+                  vector-effect="non-scaling-stroke"
+                  stroke="red"
+                  stroke-width="3"
+                  fill="none"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+              ADDED TO CART
+            </div>
+            <div
+              className={styles.modal__header__close}
+              onClick={() => setShowModal(false)}
+            >
+              X
+            </div>
           </div>
           <div>
-            <img src="" alt="" />
+            <img src="" alt="123" />
             <div>
               <p>PRODUCT NAME</p>
               <p>PRICE </p>

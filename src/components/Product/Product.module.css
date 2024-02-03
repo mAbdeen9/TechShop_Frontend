@@ -131,6 +131,24 @@
   appearance: none;
 }
 
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 7px 0 7px;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.3rem;
+}
+
+.modal__header__close {
+  font-style: normal;
+  cursor: pointer;
+}
+
+.modal__header__close:hover {
+  color: #e41f2b;
+}
+
 /* responsive size */
 
 @media only screen and (max-width: 1410px) {

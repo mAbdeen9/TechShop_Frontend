@@ -4,7 +4,7 @@ import { AiOutlineShopping } from "react-icons/ai";
 function CartIcon({ onClick }) {
   return (
     <AiOutlineShopping
-      size={24}
+      size={30}
       opacity={0.9}
       cursor={"pointer"}
       onClick={onClick}
