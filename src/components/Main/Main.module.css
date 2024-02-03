@@ -91,6 +91,7 @@
     -moz-transform: translateY(-13px);
     -ms-transform: translateY(-13px);
     -o-transform: translateY(-13px);
+    margin-bottom: 3rem;
   }
 
   .text__box p {
