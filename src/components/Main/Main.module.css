@@ -1,6 +1,6 @@
 .main__container {
   width: 100%;
-  min-height: 500px;
+  min-height: calc(100vh - 200px);
   background-color: black;
   color: white;
   display: flex;
@@ -30,6 +30,7 @@
   -ms-transform: translateY(-17px);
   -o-transform: translateY(-17px);
   color: #3efdce;
+  opacity: 0.8;
 }
 
 .text__box p {

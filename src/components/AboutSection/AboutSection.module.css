@@ -4,6 +4,8 @@
   justify-content: center;
   align-items: center;
   font-weight: 300;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 img {
@@ -34,7 +36,8 @@ img {
 .about__container span {
   font-weight: bolder;
   font-size: larger;
-  color: #f58413;
+  color: #3efdce;
+  opacity: 0.9;
   font-family: "Lemon", serif;
 }
 
