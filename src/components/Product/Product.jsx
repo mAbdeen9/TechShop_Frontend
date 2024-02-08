@@ -115,11 +115,11 @@ const Product = () => {
               >
                 <path
                   d="M1 9.17l7.926 7.927L20.889 1"
-                  vector-effect="non-scaling-stroke"
+                  vectorEffect="non-scaling-stroke"
                   stroke="red"
-                  stroke-width="3"
+                  strokeWidth="3"
                   fill="none"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                 ></path>
               </svg>
               ADDED TO CART
