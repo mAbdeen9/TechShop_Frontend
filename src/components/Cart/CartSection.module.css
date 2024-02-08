@@ -10,12 +10,12 @@
 
 .empty__cart h1 {
   font-style: italic;
-  color: antiquewhite;
+  color: #cce4cb;
 }
 
 .empty__cart div {
   color: white;
-  background-color: #f58413;
+  background-color: #34caa4;
   clip-path: polygon(18px 0%, 100% 0%, calc(100% - 18px) 100%, 0% 100%);
   -webkit-clip-path: polygon(18px 0%, 100% 0%, calc(100% - 18px) 100%, 0% 100%);
   padding: 16px 42px;

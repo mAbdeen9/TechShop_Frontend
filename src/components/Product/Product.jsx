@@ -131,19 +131,19 @@ const Product = () => {
               X
             </div>
           </div>
-          <div>
-            <img src="" alt="123" />
+          <div className={styles.modal__productInfo}>
+            <img src={productInfo?.image} alt="selected product" />
             <div>
-              <p>PRODUCT NAME</p>
-              <p>PRICE </p>
-              <p>Quantity</p>
+              <p>{productInfo?.title}</p>
+              <p>${(+productInfo?.price * +count).toFixed(2)}</p>
+              <p>Quantity : {count}</p>
             </div>
           </div>
-          <div>
+          <div className={styles.modal__subtotal}>
             <div>Cart subtotal (17 items):</div>
             <div>$505.00</div>
           </div>
-          <div>
+          <div className={styles.modal__btnBox}>
             <button>VIEW CART</button>
           </div>
         </Modal>
