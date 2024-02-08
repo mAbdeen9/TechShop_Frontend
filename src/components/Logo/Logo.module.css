@@ -8,12 +8,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: "Lemon", serif;
+  font-family: "Black Ops One", system-ui;
   cursor: pointer;
   margin-top: 5px;
 }
 
 .logo span {
+  font-family: "Lemon", serif;
   display: block;
   position: relative;
   bottom: 6px;

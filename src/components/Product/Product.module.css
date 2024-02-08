@@ -132,6 +132,8 @@
 }
 
 .modal__header {
+  padding-left: 5px;
+  padding-right: 5px;
   display: flex;
   justify-content: space-between;
   margin: 7px 0 7px;

@@ -3,9 +3,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 300;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 img {
@@ -29,7 +26,8 @@ img {
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
   font-size: 1.5rem;
-  color: white;
+  color: #b1becd;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -37,8 +35,8 @@ img {
   font-weight: bolder;
   font-size: larger;
   color: #3efdce;
-  opacity: 0.9;
-  font-family: "Lemon", serif;
+  opacity: 0.8;
+  font-family: "Black Ops One", system-ui;
 }
 
 /* responsive size */

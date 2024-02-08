@@ -13,9 +13,9 @@
   padding: 1.3rem;
   top: 0;
   right: 0;
-  width: 290px;
+  width: 390px;
   background-color: black;
-  min-height: 50%;
+  min-height: 40%;
   z-index: 1505;
   color: white;
   -webkit-animation: slide-down 300ms ease-out forwards;
