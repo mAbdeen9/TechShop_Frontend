@@ -13,10 +13,9 @@
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 1rem;
-  font-weight: 300 !important;
+  font-size: 1.8rem !important;
+  font-weight: bolder !important;
   text-align: center;
-  font-family: "Tomorrow", sans-serif;
 }
 
 .line {

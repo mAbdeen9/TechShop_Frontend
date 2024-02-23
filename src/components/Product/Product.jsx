@@ -38,6 +38,7 @@ const Product = () => {
     const product = { ...productInfo, count };
     console.log(product);
     setShowModal(true);
+    localStorage.setItem("cart", JSON.stringify(product));
   };
 
   return (
