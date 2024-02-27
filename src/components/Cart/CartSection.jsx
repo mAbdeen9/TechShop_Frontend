@@ -6,19 +6,25 @@ import { useNavigate } from "react-router-dom";
 function CartSection() {
   const navigate = useNavigate();
   const [cartProducts, setCartProducts] = useState([]);
+  const [count, setCount] = useState("");
 
+  console.log(cartProducts);
+
+  const countValueHandler = (e) => setCount(e.target.value);
   useEffect(() => {
     setCartProducts(fakeTechProducts);
   }, []);
-  console.log(cartProducts);
-  if (!cartProducts.length > 0) {
+
+  if (cartProducts === undefined || !cartProducts.length > 0) {
     return (
-      <div className={classes.empty__cart}>
-        <h1>YOUR SHOPPING CART IS EMPTY</h1>
-        <div onClick={() => navigate("/home")}>
-          <button>START SHOPPING</button>
+      <section className="container">
+        <div className={classes.empty__cart}>
+          <h1>YOUR SHOPPING CART IS EMPTY</h1>
+          <div onClick={() => navigate("/home")}>
+            <button>START SHOPPING</button>
+          </div>
         </div>
-      </div>
+      </section>
     );
   }
 
@@ -43,19 +49,57 @@ function CartSection() {
             <div>iPhone 12</div>
           </div>
           <div className={classes.items_box_info_sm}>
-            <select name="" id=""></select>
+            <select value={count} onChange={countValueHandler} name="count">
+              <option value={1}>1</option>
+              <option value={2}>2</option>
+              <option value={3}>3</option>
+            </select>
+            <div>$999</div>
+            <button>X</button>
+          </div>
+
+          <div className={classes.items_box_info_bg}>
+            <img src={cartProducts[0].image} alt={cartProducts[0].title} />
+            <div>iPhone 12</div>
+          </div>
+          <div className={classes.items_box_info_sm}>
+            <select value={count} onChange={countValueHandler} name="count">
+              <option value={1}>1</option>
+              <option value={2}>2</option>
+              <option value={3}>3</option>
+            </select>
+            <div>$999</div>
+            <button>X</button>
+          </div>
+
+          <div className={classes.items_box_info_bg}>
+            <img src={cartProducts[0].image} alt={cartProducts[0].title} />
+            <div>iPhone 12</div>
+          </div>
+          <div className={classes.items_box_info_sm}>
+            <select value={count} onChange={countValueHandler} name="count">
+              <option value={1}>1</option>
+              <option value={2}>2</option>
+              <option value={3}>3</option>
+            </select>
             <div>$999</div>
             <button>X</button>
           </div>
         </div>
-        <div className={classes.line}></div>
+
         <div className={classes.subtotal_box}>
-          <div>Subtotal</div>
-          <div>$173.00</div>
+          <div className={classes.empty__box}></div>
+          <div className={classes.full__box}>
+            <div className={classes.line}></div>
+            <div>
+              <div>Subtotal</div>
+              <div>$173.00</div>
+            </div>
+          </div>
         </div>
         <div className={classes.buttons_box}>
-          <button>BACK TO SHOPPING</button>
-          <button>CHECKOUT</button>
+          <button className={classes.back__btn}>BACK TO SHOPPING</button>
+          <button className={classes.checkout__btn}>CHECKOUT</button>
         </div>
       </div>
     </section>
