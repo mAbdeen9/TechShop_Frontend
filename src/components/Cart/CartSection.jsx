@@ -44,46 +44,121 @@ function CartSection() {
         </div>
         <div className={classes.line}></div>
         <div className={classes.items_box}>
-          <div className={classes.items_box_info_bg}>
-            <img src={cartProducts[0].image} alt={cartProducts[0].title} />
-            <div>iPhone 12</div>
+          <div className={classes.item}>
+            <div className={classes.items_box_info_bg}>
+              <img src={cartProducts[0].image} alt={cartProducts[0].title} />
+              <div>
+                iPhone 12
+                <span>
+                  <div>$999</div>
+                  <select
+                    value={count}
+                    onChange={countValueHandler}
+                    name="count"
+                  >
+                    <option value={1}>1</option>
+                    <option value={2}>2</option>
+                    <option value={3}>3</option>
+                  </select>
+                </span>
+              </div>
+            </div>
+            <div className={classes.items_box_info_sm}>
+              <select value={count} onChange={countValueHandler} name="count">
+                <option value={1}>1</option>
+                <option value={2}>2</option>
+                <option value={3}>3</option>
+              </select>
+              <div>$999</div>
+              <button>X</button>
+            </div>
           </div>
-          <div className={classes.items_box_info_sm}>
-            <select value={count} onChange={countValueHandler} name="count">
-              <option value={1}>1</option>
-              <option value={2}>2</option>
-              <option value={3}>3</option>
-            </select>
-            <div>$999</div>
-            <button>X</button>
+          <div className={classes.item}>
+            <div className={classes.items_box_info_bg}>
+              <img src={cartProducts[0].image} alt={cartProducts[0].title} />
+              <div>
+                iPhone 12
+                <span>
+                  <div>$999</div>
+                  <select
+                    value={count}
+                    onChange={countValueHandler}
+                    name="count"
+                  >
+                    <option value={1}>1</option>
+                    <option value={2}>2</option>
+                    <option value={3}>3</option>
+                  </select>
+                </span>
+              </div>
+            </div>
+            <div className={classes.items_box_info_sm}>
+              <select value={count} onChange={countValueHandler} name="count">
+                <option value={1}>1</option>
+                <option value={2}>2</option>
+                <option value={3}>3</option>
+              </select>
+              <div>$999</div>
+              <button>X</button>
+            </div>
+          </div>{" "}
+          <div className={classes.item}>
+            <div className={classes.items_box_info_bg}>
+              <img src={cartProducts[0].image} alt={cartProducts[0].title} />
+              <div>
+                iPhone 12312312
+                <span>
+                  <div>$999</div>
+                  <select
+                    value={count}
+                    onChange={countValueHandler}
+                    name="count"
+                  >
+                    <option value={1}>1</option>
+                    <option value={2}>2</option>
+                    <option value={3}>3</option>
+                  </select>
+                </span>
+              </div>
+            </div>
+            <div className={classes.items_box_info_sm}>
+              <select value={count} onChange={countValueHandler} name="count">
+                <option value={1}>1</option>
+                <option value={2}>2</option>
+                <option value={3}>3</option>
+              </select>
+              <div>$999</div>
+              <button>X</button>
+            </div>
           </div>
-
-          <div className={classes.items_box_info_bg}>
-            <img src={cartProducts[0].image} alt={cartProducts[0].title} />
-            <div>iPhone 12</div>
-          </div>
-          <div className={classes.items_box_info_sm}>
-            <select value={count} onChange={countValueHandler} name="count">
-              <option value={1}>1</option>
-              <option value={2}>2</option>
-              <option value={3}>3</option>
-            </select>
-            <div>$999</div>
-            <button>X</button>
-          </div>
-
-          <div className={classes.items_box_info_bg}>
-            <img src={cartProducts[0].image} alt={cartProducts[0].title} />
-            <div>iPhone 12</div>
-          </div>
-          <div className={classes.items_box_info_sm}>
-            <select value={count} onChange={countValueHandler} name="count">
-              <option value={1}>1</option>
-              <option value={2}>2</option>
-              <option value={3}>3</option>
-            </select>
-            <div>$999</div>
-            <button>X</button>
+          <div className={classes.item}>
+            <div className={classes.items_box_info_bg}>
+              <img src={cartProducts[0].image} alt={cartProducts[0].title} />
+              <div>
+                iPhone 12
+                <span>
+                  <div>$999</div>
+                  <select
+                    value={count}
+                    onChange={countValueHandler}
+                    name="count"
+                  >
+                    <option value={1}>1</option>
+                    <option value={2}>2</option>
+                    <option value={3}>3</option>
+                  </select>
+                </span>
+              </div>
+            </div>
+            <div className={classes.items_box_info_sm}>
+              <select value={count} onChange={countValueHandler} name="count">
+                <option value={1}>1</option>
+                <option value={2}>2</option>
+                <option value={3}>3</option>
+              </select>
+              <div>$999</div>
+              <button>X</button>
+            </div>
           </div>
         </div>
 
