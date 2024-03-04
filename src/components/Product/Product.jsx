@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import styles from "./Product.module.css";
 import fakeTechProducts from "../../fakeTechProducts.json";
 import { useEffect, useState } from "react";
+import useStorage from "../../hooks/useStorage";
 import Modal from "../Modal/Modal";
 
 const Product = () => {
@@ -10,6 +11,7 @@ const Product = () => {
   const [galleryImageSelector, setGalleryImageSelector] = useState("");
   const [count, setCount] = useState("1");
   const [showModal, setShowModal] = useState(false);
+  const { addToLocalStorage } = useStorage();
 
   useEffect(() => {
     const product = fakeTechProducts.find((p) => p.id === +id);
@@ -36,9 +38,8 @@ const Product = () => {
 
   const addToCartHandler = () => {
     const product = { ...productInfo, count };
-    console.log(product);
     setShowModal(true);
-    localStorage.setItem("cart", JSON.stringify(product));
+    addToLocalStorage(product);
   };
 
   return (

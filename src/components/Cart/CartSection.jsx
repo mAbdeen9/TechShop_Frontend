@@ -1,18 +1,19 @@
 import classes from "./CartSection.module.css";
-import fakeTechProducts from "../../fakeTechProducts.json";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useStorage from "../../hooks/useStorage";
 
 function CartSection() {
   const navigate = useNavigate();
   const [cartProducts, setCartProducts] = useState([]);
   const [count, setCount] = useState("");
-
-  console.log(cartProducts);
+  const { getCart } = useStorage();
 
   const countValueHandler = (e) => setCount(e.target.value);
   useEffect(() => {
-    setCartProducts(fakeTechProducts);
+    const data = getCart();
+    if (data !== null) setCartProducts(data);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (cartProducts === undefined || !cartProducts.length > 0) {
@@ -44,122 +45,39 @@ function CartSection() {
         </div>
         <div className={classes.line}></div>
         <div className={classes.items_box}>
-          <div className={classes.item}>
-            <div className={classes.items_box_info_bg}>
-              <img src={cartProducts[0].image} alt={cartProducts[0].title} />
-              <div>
-                iPhone 12
-                <span>
-                  <div>$999</div>
+          {cartProducts.map((item) => {
+            return (
+              <div key={item.id} className={classes.item}>
+                <div className={classes.items_box_info_bg}>
+                  <img src={item.image} alt={item.title} />
+                  <div>
+                    {item.title}
+                    <span>
+                      <div>${item.price}</div>
+                      <select
+                        value={item.count}
+                        onChange={countValueHandler}
+                        name="count"
+                      >
+                        <option value={item.count}>{item.count}</option>
+                      </select>
+                    </span>
+                  </div>
+                </div>
+                <div className={classes.items_box_info_sm}>
                   <select
                     value={count}
                     onChange={countValueHandler}
                     name="count"
                   >
-                    <option value={1}>1</option>
-                    <option value={2}>2</option>
-                    <option value={3}>3</option>
+                    <option value={item.count}>{item.count}</option>
                   </select>
-                </span>
+                  <div>${item.price}</div>
+                  <button>X</button>
+                </div>
               </div>
-            </div>
-            <div className={classes.items_box_info_sm}>
-              <select value={count} onChange={countValueHandler} name="count">
-                <option value={1}>1</option>
-                <option value={2}>2</option>
-                <option value={3}>3</option>
-              </select>
-              <div>$999</div>
-              <button>X</button>
-            </div>
-          </div>
-          <div className={classes.item}>
-            <div className={classes.items_box_info_bg}>
-              <img src={cartProducts[0].image} alt={cartProducts[0].title} />
-              <div>
-                iPhone 12
-                <span>
-                  <div>$999</div>
-                  <select
-                    value={count}
-                    onChange={countValueHandler}
-                    name="count"
-                  >
-                    <option value={1}>1</option>
-                    <option value={2}>2</option>
-                    <option value={3}>3</option>
-                  </select>
-                </span>
-              </div>
-            </div>
-            <div className={classes.items_box_info_sm}>
-              <select value={count} onChange={countValueHandler} name="count">
-                <option value={1}>1</option>
-                <option value={2}>2</option>
-                <option value={3}>3</option>
-              </select>
-              <div>$999</div>
-              <button>X</button>
-            </div>
-          </div>{" "}
-          <div className={classes.item}>
-            <div className={classes.items_box_info_bg}>
-              <img src={cartProducts[0].image} alt={cartProducts[0].title} />
-              <div>
-                iPhone 12312312
-                <span>
-                  <div>$999</div>
-                  <select
-                    value={count}
-                    onChange={countValueHandler}
-                    name="count"
-                  >
-                    <option value={1}>1</option>
-                    <option value={2}>2</option>
-                    <option value={3}>3</option>
-                  </select>
-                </span>
-              </div>
-            </div>
-            <div className={classes.items_box_info_sm}>
-              <select value={count} onChange={countValueHandler} name="count">
-                <option value={1}>1</option>
-                <option value={2}>2</option>
-                <option value={3}>3</option>
-              </select>
-              <div>$999</div>
-              <button>X</button>
-            </div>
-          </div>
-          <div className={classes.item}>
-            <div className={classes.items_box_info_bg}>
-              <img src={cartProducts[0].image} alt={cartProducts[0].title} />
-              <div>
-                iPhone 12
-                <span>
-                  <div>$999</div>
-                  <select
-                    value={count}
-                    onChange={countValueHandler}
-                    name="count"
-                  >
-                    <option value={1}>1</option>
-                    <option value={2}>2</option>
-                    <option value={3}>3</option>
-                  </select>
-                </span>
-              </div>
-            </div>
-            <div className={classes.items_box_info_sm}>
-              <select value={count} onChange={countValueHandler} name="count">
-                <option value={1}>1</option>
-                <option value={2}>2</option>
-                <option value={3}>3</option>
-              </select>
-              <div>$999</div>
-              <button>X</button>
-            </div>
-          </div>
+            );
+          })}
         </div>
 
         <div className={classes.subtotal_box}>
