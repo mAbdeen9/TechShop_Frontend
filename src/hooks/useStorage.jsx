@@ -4,26 +4,25 @@
 
 function useStorage() {
   const addToLocalStorage = (data) => {
-    const cart = localStorage.getItem("cart");
-    if (!cart) {
-      localStorage.setItem("cart", JSON.stringify([data]));
-    } else {
-      const cartArray = JSON.parse(cart);
+    const cart = JSON.parse(localStorage.getItem("CART")) || null;
 
-      for (let index in cartArray) {
-        if (cartArray[index].id === data.id) {
-          cartArray[index].count = +cartArray[index].count + +data.count;
+    if (cart) {
+      for (let index in cart) {
+        if (cart[index].id === data.id) {
+          cart[index].count = +cart[index].count + +data.count;
         } else {
-          cartArray.push(data);
+          cart.push(data);
         }
       }
-
-      localStorage.setItem("cart", JSON.stringify(cartArray));
+      localStorage.setItem("CART", JSON.stringify(cart));
+      return;
     }
+
+    localStorage.setItem("CART", JSON.stringify([data]));
   };
 
   const getCart = () => {
-    const cart = JSON.parse(localStorage.getItem("cart"));
+    const cart = JSON.parse(localStorage.getItem("CART"));
     return cart;
   };
 
