@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import styles from "./Product.module.css";
 import fakeTechProducts from "../../fakeTechProducts.json";
 import { useEffect, useState } from "react";
@@ -6,6 +6,7 @@ import useStorage from "../../hooks/useStorage";
 import Modal from "../Modal/Modal";
 
 const Product = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [productInfo, setProductInfo] = useState({});
   const [galleryImageSelector, setGalleryImageSelector] = useState("");
@@ -145,8 +146,20 @@ const Product = () => {
             <div>Cart subtotal (17 items):</div>
             <div>$505.00</div>
           </div>
-          <div className={styles.modal__btnBox}>
-            <button>VIEW CART</button>
+          <div>
+            <div
+              className={styles.modal__btnBox}
+              onClick={() => navigate("/cart")}
+            >
+              <button>VIEW CART</button>
+            </div>
+            <div
+              style={{ background: "white" }}
+              className={styles.modal__btnBox}
+              onClick={() => setShowModal(false)}
+            >
+              <button style={{ color: "black" }}>BACK</button>
+            </div>
           </div>
         </Modal>
       )}

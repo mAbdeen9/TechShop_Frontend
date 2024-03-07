@@ -6,13 +6,13 @@ import useStorage from "../../hooks/useStorage";
 function CartSection() {
   const navigate = useNavigate();
   const [cartProducts, setCartProducts] = useState([]);
-  const [count, setCount] = useState("");
-  const { getCart } = useStorage();
+  const [subTotal, setSubTotal] = useState("");
+  const { getCart, getSubtotal } = useStorage();
 
-  const countValueHandler = (e) => setCount(e.target.value);
   useEffect(() => {
     const data = getCart();
     if (data !== null) setCartProducts(data);
+    setSubTotal(getSubtotal());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -54,22 +54,14 @@ function CartSection() {
                     {item.title}
                     <span>
                       <div>${item.price}</div>
-                      <select
-                        value={item.count}
-                        onChange={countValueHandler}
-                        name="count"
-                      >
+                      <select value={item.count} name="count">
                         <option value={item.count}>{item.count}</option>
                       </select>
                     </span>
                   </div>
                 </div>
                 <div className={classes.items_box_info_sm}>
-                  <select
-                    value={count}
-                    onChange={countValueHandler}
-                    name="count"
-                  >
+                  <select name="count">
                     <option value={item.count}>{item.count}</option>
                   </select>
                   <div>${item.price}</div>
@@ -86,12 +78,14 @@ function CartSection() {
             <div className={classes.line}></div>
             <div>
               <div>Subtotal</div>
-              <div>$173.00</div>
+              <div>${subTotal}</div>
             </div>
           </div>
         </div>
         <div className={classes.buttons_box}>
-          <button className={classes.back__btn}>BACK TO SHOPPING</button>
+          <button className={classes.back__btn} onClick={() => navigate(-1)}>
+            BACK TO SHOPPING
+          </button>
           <button className={classes.checkout__btn}>CHECKOUT</button>
         </div>
       </div>

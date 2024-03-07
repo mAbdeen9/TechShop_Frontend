@@ -15,7 +15,7 @@ export default function Footer() {
           <Link aria-label="Github" to="https://github.com/mAbdeen9">
             <FaGithub />
           </Link>
-          <Link aria-label="Instagram" to="https://www.instagram.com/moe_ab92/">
+          <Link aria-label="Instagram" to={"https://mabdeen.netlify.app/"}>
             <FaInstagram />
           </Link>
           <Link
@@ -40,7 +40,7 @@ export default function Footer() {
         <p className={classes.copyright}>
           Copyright &copy; {new Date().getFullYear()}
           <br />
-          <Link to={"https://mabdeen.com/"}>
+          <Link to={"https://mabdeen.netlify.app/"}>
             <FaLink /> MAB17
           </Link>
         </p>
