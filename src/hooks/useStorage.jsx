@@ -3,7 +3,7 @@ function useStorage() {
   const cart = JSON.parse(localStorage.getItem("CART")) || null;
 
   const addToLocalStorage = (data) => {
-    if (cart) {
+    if (cart && cart.length > 0) {
       for (let index in cart) {
         if (cart[index].id === data.id) {
           cart[index].count = +cart[index].count + +data.count;
@@ -33,7 +33,13 @@ function useStorage() {
     return subTotal.toFixed(2);
   };
 
-  return { addToLocalStorage, getCart, getSubtotal };
+  const deleteItem = (item) => {
+    const filteredCart = cart.filter((i) => i.id !== item.id);
+    console.log(filteredCart);
+    localStorage.setItem("CART", JSON.stringify(filteredCart));
+  };
+
+  return { addToLocalStorage, getCart, getSubtotal, deleteItem };
 }
 
 export default useStorage;

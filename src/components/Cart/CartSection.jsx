@@ -7,14 +7,23 @@ function CartSection() {
   const navigate = useNavigate();
   const [cartProducts, setCartProducts] = useState([]);
   const [subTotal, setSubTotal] = useState("");
-  const { getCart, getSubtotal } = useStorage();
+  const { getCart, getSubtotal, deleteItem } = useStorage();
+  const [updatePage, setUpdatePage] = useState();
 
   useEffect(() => {
     const data = getCart();
     if (data !== null) setCartProducts(data);
     setSubTotal(getSubtotal());
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [updatePage]);
+
+  const deleteItemHandler = (item) => {
+    const userAnswer = window.confirm("Do you really want to delete?");
+    if (userAnswer) {
+      deleteItem(item);
+      setUpdatePage(Math.random());
+    }
+  };
 
   if (cartProducts === undefined || !cartProducts.length > 0) {
     return (
@@ -54,18 +63,18 @@ function CartSection() {
                     {item.title}
                     <span>
                       <div>${item.price}</div>
-                      <select value={item.count} name="count">
-                        <option value={item.count}>{item.count}</option>
+                      <select defaultValue={item.count} name="count">
+                        <option defaultValue={item.count}>{item.count}</option>
                       </select>
                     </span>
                   </div>
                 </div>
                 <div className={classes.items_box_info_sm}>
-                  <select name="count">
-                    <option value={item.count}>{item.count}</option>
+                  <select defaultValue={item.count} name="count">
+                    <option defaultValue={item.count}>{item.count}</option>
                   </select>
                   <div>${item.price}</div>
-                  <button>X</button>
+                  <button onClick={() => deleteItemHandler(item)}>X</button>
                 </div>
               </div>
             );
