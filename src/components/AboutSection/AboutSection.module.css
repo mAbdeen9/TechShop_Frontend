@@ -25,18 +25,16 @@ img {
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #b1becd;
-  font-weight: 600;
+  letter-spacing: -1.4px;
   text-align: center;
 }
 
 .about__container span {
   font-weight: bolder;
-  font-size: larger;
-  color: #3efdce;
-  opacity: 0.8;
-  font-family: "Black Ops One", system-ui;
+  font-size: 1.8rem;
+  color: #90e2a8;
 }
 
 /* responsive size */

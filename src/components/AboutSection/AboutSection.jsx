@@ -9,8 +9,8 @@ function AboutSection() {
         <p>
           <span>Tech shop</span> is a passion project built from the ground up
           with React JS to hone my front-end development skills . This simulated
-          shop allows me to experiment with UI/UX design, state management, and
-          all the bells and whistles of React.
+          shop allows me to experiment with UI/UX design, and all the bells and
+          whistles of React.
         </p>
       </div>
     </section>

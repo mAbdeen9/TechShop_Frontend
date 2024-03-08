@@ -24,7 +24,10 @@ export default function Footer() {
           >
             <FaLinkedin />
           </Link>
-          <Link aria-label="Youtube" to="https://www.youtube.com/@m7md9110">
+          <Link
+            aria-label="Youtube"
+            to="https://www.youtube.com/channel/UCQbobSAoLpPl-PIMAl8khhw"
+          >
             <FaYoutube />
           </Link>
         </div>

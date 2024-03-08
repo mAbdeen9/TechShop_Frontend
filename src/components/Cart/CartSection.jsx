@@ -18,7 +18,7 @@ function CartSection() {
   }, [updatePage]);
 
   const deleteItemHandler = (item) => {
-    const userAnswer = window.confirm("Do you really want to delete?");
+    const userAnswer = window.confirm(`Remove ${item.title} from your cart?`);
     if (userAnswer) {
       deleteItem(item);
       setUpdatePage(Math.random());
