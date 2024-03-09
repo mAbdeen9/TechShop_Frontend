@@ -13,6 +13,7 @@ const Product = () => {
   const [count, setCount] = useState("1");
   const [showModal, setShowModal] = useState(false);
   const { addToLocalStorage } = useStorage();
+  const { getSubtotal } = useStorage();
 
   useEffect(() => {
     const product = fakeTechProducts.find((p) => p.id === +id);
@@ -143,8 +144,8 @@ const Product = () => {
             </div>
           </div>
           <div className={styles.modal__subtotal}>
-            <div>Cart subtotal (17 items):</div>
-            <div>$505.00</div>
+            <div>Cart Subtotal : </div>
+            <div>${getSubtotal()}</div>
           </div>
           <div>
             <div

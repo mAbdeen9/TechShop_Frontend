@@ -12,9 +12,6 @@
     },
     "category": "Smartphones",
     "image": "https://i.ibb.co/hyj00Nr/iphone12.png",
-    "gallery": [
-      "https://i.ibb.co/hyj00Nr/iphone12.png",
-      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-compare-iphone-14-202309?wid=384&hei=512&fmt=jpeg&qlt=90&.v=1693516153040"
-    ]
+    "gallery": ["https://i.ibb.co/hyj00Nr/iphone12.png"]
   }
 ]
