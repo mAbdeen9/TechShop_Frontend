@@ -60,7 +60,11 @@ function CartSection() {
             return (
               <div key={item.id} className={classes.item}>
                 <div className={classes.items_box_info_bg}>
-                  <img src={item.image} alt={item.title} />
+                  <img
+                    onClick={() => navigate(`/product/${item.id}`)}
+                    src={item.image}
+                    alt={item.title}
+                  />
                   <div>
                     {item.title}
                     <span>
