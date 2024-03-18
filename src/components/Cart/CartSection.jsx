@@ -41,7 +41,9 @@ function CartSection() {
   return (
     <section className="container">
       <div className={classes.fullCart}>
-        <h2>5 ITEMS IN YOUR CART FOR $146.00</h2>
+        <h2>
+          {cartProducts?.length} ITEMS IN YOUR CART FOR ${subTotal}
+        </h2>
         <div className={classes.items_header_info}>
           <div className={classes.items_header_info_bg}>
             <div>ITEM</div>
