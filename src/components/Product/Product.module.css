@@ -45,8 +45,8 @@
 }
 
 .gallery__main img {
-  width: 410px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
   cursor: pointer;
 }
 
@@ -249,7 +249,7 @@
 
   .gallery__main img {
     width: 320px;
-    height: 350px;
+    height: 320px;
   }
 
   .gallery__thumbs {

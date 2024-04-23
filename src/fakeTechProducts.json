@@ -16,5 +16,23 @@
       "https://i.ibb.co/hyj00Nr/iphone12.png",
       "https://i.ibb.co/1bKhjwn/i-Phone12-Pro.png"
     ]
+  },
+  {
+    "id": 2,
+    "title": "MacBook Air",
+    "price": 1200,
+    "description": "MacBook Air sails through work and play — and the M3 chip brings even greater capabilities to the world’s most popular laptop. With up to 18 hours of battery life,1 you can take the superportable MacBook Air anywhere and blaze through whatever you’re into. ",
+    "specs": {
+      "Finish": "Silver, Starlight, Space GrayMidnight",
+      "Display": "13.6-inch (diagonal) LED-backlit display with IPS technology;1 2560-by-1664 native resolution at 224 pixels per inch500 nits brightness",
+      "Chip": "Apple M3 chip 8-core CPU with 4 performance cores and 4 efficiency cores 8-core GPU",
+      "Media Engine": "Hardware-accelerated H.264, HEVC, ProRes, and ProRes RAWVideo decode engineVideo encode engineProRes encode and decode engineAV1 decode engine"
+    },
+    "category": "Computers",
+    "image": "https://i.ibb.co/fFdn9g4/81-YKn3l-Ec-EL-AC-SL1500-removebg-preview-min.png",
+    "gallery": [
+      "https://i.ibb.co/fFdn9g4/81-YKn3l-Ec-EL-AC-SL1500-removebg-preview-min.png",
+      "https://i.ibb.co/XzCfNtJ/m3-macbook-pro-610x365-removebg-preview.png"
+    ]
   }
 ]
